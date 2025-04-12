@@ -52,8 +52,7 @@ def factor(n):
             r.append(i)
     if n != 1:
         r.append(n)
-    return " ".join(map(str, r))
-
+    return ", ".join(map(str, r))
 # Returns n! (n factorial)
 def factorial(n):
     if n % 1 != 0.0:
@@ -115,15 +114,7 @@ while True:
         else:
             print("Error: Incorrect Formatting")
 
-    elif s[1].lower() == "factorial":
-        if len(s) == 2:
-            try:
-                print(factorial(float(s[0])))
-            except:
-                print("Error: Invalid Number")
-        else:
-            print("Error: Incorrect Formatting")
-    
+    # Exit program
     elif s[0].lower() == "exit":
         print("Thank you!")
         break
